@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>hello</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AlterOS</title>
+    <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
-    <h1>rin best girl</h1>
-    <p>idgaf</p>
+    <div id="crt" class="crt">
+      <div id="terminal">
+        <div id="output"></div>
+        <div id="input-line" class="input-line">
+          <span id="prompt">C:\&gt;</span>
+          <input type="text" id="command-input" autofocus autocomplete="off" spellcheck="false" />
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

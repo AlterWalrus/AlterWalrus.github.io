@@ -1,0 +1,1 @@
+export type ProgramFunction = (container: HTMLElement) => void | (() => void);

@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+  height: 100vh;
+  overflow: hidden;
+  padding: 20px;
+}
+
+#crt {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#terminal {
+  flex: 1;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.output-line {
+  margin-bottom: 4px;
+}
+
+.input-line {
+  display: flex;
+  align-items: center;
+}
+
+#prompt {
+  margin-right: 8px;
+  user-select: none;
+}
+
+#command-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  flex: 1;
+  caret-color: #c8c8c8;
+}
+
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.ascii-art {
+  font-family: monospace;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.os-btn {
+  background-color: #bfbfbf;
+  color: #000000;
+  border: none;
+  padding: 4px 5px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  user-select: none;
+  box-shadow: 2px 2px 0px #626262;
+  transition: all 0.1s ease;
+}
+
+.os-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 2px 2px 0px #cecece;
+}
+
+.os-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+.secondary-text {
+  color: #828282;
+}
