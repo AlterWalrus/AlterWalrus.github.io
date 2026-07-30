@@ -56,13 +56,13 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 0px 0;
+  margin-bottom: 10px;
 }
 
 .ascii-art {
   font-family: monospace;
   line-height: 1;
-  margin-bottom: 8px;
+  margin: 0;
 }
 
 .os-btn {

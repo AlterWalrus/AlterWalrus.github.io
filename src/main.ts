@@ -1,5 +1,5 @@
 import './style.css';
-import { homePage, aboutPage } from './core_programs';
+import { help, homePage, aboutPage } from './core_programs';
 
 const terminalElement = document.getElementById('terminal') as HTMLDivElement;
 const outputElement = document.getElementById('output') as HTMLDivElement;
@@ -44,12 +44,17 @@ function processCommand(rawInput: string): void {
 
   switch (command) {
     case 'CLS':
+    case 'CLEAR':
       if (activeCleanup) activeCleanup();
       outputElement.innerHTML = '';
       break;
 
     case 'HOME':
       runProgram(homePage);
+      break;
+
+    case 'HELP':
+      runProgram(help);
       break;
     
     case 'ABOUT':
