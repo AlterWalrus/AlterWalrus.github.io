@@ -1,5 +1,5 @@
 import './style.css';
-import { homePage } from './core_programs';
+import { homePage, aboutPage } from './core_programs';
 
 const terminalElement = document.getElementById('terminal') as HTMLDivElement;
 const outputElement = document.getElementById('output') as HTMLDivElement;
@@ -43,17 +43,21 @@ function processCommand(rawInput: string): void {
   const command = parts[0].toUpperCase();
 
   switch (command) {
+    case 'CLS':
+      if (activeCleanup) activeCleanup();
+      outputElement.innerHTML = '';
+      break;
+
     case 'HOME':
       runProgram(homePage);
       break;
     
+    case 'ABOUT':
+      runProgram(aboutPage);
+      break;
+    
     case 'HELLO':
       appendOutput("hello world! :D");
-      break;
-
-    case 'CLS':
-      if (activeCleanup) activeCleanup();
-      outputElement.innerHTML = '';
       break;
 
     default:
@@ -63,6 +67,7 @@ function processCommand(rawInput: string): void {
       outputElement.appendChild(line);
       break;
   }
+  terminalElement.scrollTop = terminalElement.scrollHeight;
 }
 
 
